@@ -1,4 +1,3 @@
 [submodule "plugins/pelican"]
 	path = plugins/pelican
 	url = git://github.com/benjaminabel/pelican-plugins.git
-    branch = liquidtags_notebook-support-ipython3
