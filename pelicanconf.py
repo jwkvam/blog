@@ -5,6 +5,7 @@ from __future__ import unicode_literals
 import os
 
 AUTHOR = 'Jacques Kvam'
+# AUTHOR = 'Newfing'
 SITENAME = 'Nothing New'
 SITEURL = ''
 
@@ -22,6 +23,8 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 TAG_CLOUD_MAX_ITEMS = 0
+
+ABOUT_ME = None
 # BOOTSTRAP_FLUID = True
 BOOTSTRAP_NAVBAR_INVERSE = True
 DISPLAY_ARTICLE_INFO_ON_INDEX = True
@@ -33,9 +36,14 @@ HIDE_SIDEBAR = True
 #          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-# SOCIAL = (('You can add links in your config file', '#'),
+# SOCIAL = (('You can add links in your config file', 'google.com'),
 #           ('Another social link', '#'),)
+# GITHUB_URL = 'github.com/jwkvam'
+# TWITTER_USERNAME = 'jwkvam'
 
+DIRECT_TEMPLATES = ['index', 'authors', 'archives']
+SHOW_ARTICLE_CATEGORY = False
+DISPLAY_CATEGORIES_ON_MENU = False
 DEFAULT_PAGINATION = False
 
 # Uncomment following line if you want document-relative URLs when developing
@@ -43,15 +51,16 @@ DEFAULT_PAGINATION = False
 
 MARKUP = ('md', 'ipynb')
 
-STATIC_PATHS = ['notebooks', 'logo.png']
+STATIC_PATHS = ['notebooks', 'logos']
 NOTEBOOK_DIR = 'notebooks'
 
 PLUGIN_PATHS = ['plugins/pelican']
 PYGMENTS_STYLE = 'solarizedlight'
-# PYGMENTS_STYLE = 'autumn'
+FAVICON = 'logos/logo.png'
+SITELOGO = 'logos/ilogo.png'
+SITELOGO_SIZE = 30
 PLUGINS = ['summary', 'liquid_tags.notebook']
 THEME = 'themes/bootstrap/'
-FAVICON = 'logo.png'
 
 # if not os.path.exists('_nb_header.html'):
 #     import warnings
