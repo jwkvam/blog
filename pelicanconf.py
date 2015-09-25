@@ -7,7 +7,8 @@ import os
 AUTHOR = 'Jacques Kvam'
 # AUTHOR = 'Newfing'
 SITENAME = 'Nothing New'
-SITEURL = ''
+# SITEURL = ''
+HIDE_SITENAME = False
 
 PATH = 'content'
 
@@ -41,6 +42,10 @@ HIDE_SIDEBAR = True
 # GITHUB_URL = 'github.com/jwkvam'
 # TWITTER_USERNAME = 'jwkvam'
 
+# SOCIAL = (('twitter', 'http://twitter.com/jwkvam'),
+#           ('github', 'http://github.com/jwkvam'),
+#           ('linkedin', 'http://www.linkedin.com/in/jwkvam'))
+
 DIRECT_TEMPLATES = ['index', 'authors', 'archives']
 SHOW_ARTICLE_CATEGORY = False
 DISPLAY_CATEGORIES_ON_MENU = False
@@ -51,16 +56,23 @@ DEFAULT_PAGINATION = False
 
 MARKUP = ('md', 'ipynb')
 
-STATIC_PATHS = ['notebooks', 'logos']
+STATIC_PATHS = ['notebooks', 'logos', 'custom']
 NOTEBOOK_DIR = 'notebooks'
 
-PLUGIN_PATHS = ['plugins/pelican']
+PLUGIN_PATHS = ['plugins/pelican-plugins']
 PYGMENTS_STYLE = 'solarizedlight'
 FAVICON = 'logos/logo.png'
-SITELOGO = 'logos/ilogo.png'
+SITELOGO = '' #'logos/ilogo.png'
 SITELOGO_SIZE = 30
 PLUGINS = ['summary', 'liquid_tags.notebook']
 THEME = 'themes/bootstrap/'
+
+CUSTOM_CSS = 'custom/custom.css'
+BOOTSTRAP_THEME = 'readable'
+# Tell Pelican to change the path to 'static/custom.css' in the output dir
+# EXTRA_PATH_METADATA = {
+#     'static/custom.css': {'path': 'static/custom.css'}
+# }
 
 # if not os.path.exists('_nb_header.html'):
 #     import warnings
